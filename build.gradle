@@ -22,7 +22,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-//일반 Jar 생성
+//빌드를 위한 일반 Jar 생성
 task buildJar(type: Jar) {
     manifest {
         attributes 'Main-Class': 'hello.embed.EmbedTomcatSpringMain'
@@ -30,7 +30,7 @@ task buildJar(type: Jar) {
     with jar
 }
 
-//Fat Jar 생성
+// jar들을 합치기 위한 Fat Jar 생성
 task buildFatJar(type: Jar) {
     manifest {
         attributes 'Main-Class': 'hello.embed.EmbedTomcatSpringMain'
